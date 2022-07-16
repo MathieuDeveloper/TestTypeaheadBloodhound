@@ -13,15 +13,65 @@
 </head>
 
 <body>
-       <div class="container">
-           <h1 class="mt-5">Basic Template </h1>
-           <p class="lead">Simple template to start your design with</p>
-       </div>
+    <div class="container">
+        <h1 class="mt-5">Basic Template </h1>
+        <p class="lead">Simple template to start your design with</p>
 
-    <!-- Bootstrap JS -->
+        <div id="bloodhound">
+            <input class="typeahead" type="text" placeholder="States of USA">
+          </div>
+
+
+
+
+
+
+
+
+
+        <!-- <script>
+             var bestPictures = new Bloodhound({
+                datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+                queryTokenizer: Bloodhound.tokenizers.whitespace,
+                local: ['Red','Blood Red','White','Blue','Yellow','Green','Black','Pink','Orange'],
+                remote: {
+                    url: 'https://api.themoviedb.org/3/search/movie?api_key=06c5d7152a9119d9afbc2813da1ff6ed&query=%QUERY.json',
+                    wildcard: '%QUERY'
+                }
+            });
+
+            $('#remote .typeahead').typeahead(null, {
+                name: 'best-pictures',
+                display: 'value',
+                source: bestPictures
+            });
+        </script> -->
+
+
+
+
+        <!-- <script src="js/site.js"></script>
+<script>document.getElementById("btnSubmit").addEventListener("click",getValue);</script> -->
+
+    </div>
+
+     Bootstrap JS 
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bloodhound.js"></script>
+    <script src="/js/typeahead.jquery.js"></script> 
+
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/bloodhound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/1.2.1/typeahead.jquery.min.js"></script> -->
+
+    <script src="/js/myjs.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
     </script>
+
+
 </body>
 
 </html>
