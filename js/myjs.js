@@ -12,28 +12,32 @@ var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
 
 
 var states = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.whitespace,
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    // `states` is an array of state names defined in "The Basics"
-    //local: states,
+  datumTokenizer: Bloodhound.tokenizers.whitespace,
+  queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // `states` is an array of state names defined in "The Basics"
+  //local: states,
 
-    remote: {
-        url: 'https://api.themoviedb.org/3/search/movie?api_key=06c5d7152a9119d9afbc2813da1ff6ed&query=%QUERY.json',
-        wildcard: '%QUERY',
-        transfrom: function (url) {
-            return JSON.parse(url).title
-        }
-    },
-   
+  remote: {
+    url: 'https://api.themoviedb.org/3/search/movie?api_key=06c5d7152a9119d9afbc2813da1ff6ed&query=%QUERY.json',
+    wildcard: '%QUERY',
+    //filter: function(response){return JSON.parse(response).title}
     
-  });
-  
-  $('#bloodhound .typeahead').typeahead({
-    hint: true,
-    highlight: true,
-    minLength: 1
+    // transfrom: function (url) {
+    //     return JSON.parse(url).title
+    // }
   },
-  {
-    name: 'states',
-    source: states
-  });
+
+});
+
+var newStates = JSON.parse(states).title;
+
+
+$('#bloodhound .typeahead').typeahead({
+  hint: true,
+  highlight: true,
+  minLength: 1
+}, {
+  name: 'states',  
+  source: states
+});
+
