@@ -18,9 +18,9 @@ var bloodMovies = new Bloodhound({
 $('#bloodhound .typeahead').typeahead(null, 
   {
   name: 'title',
-  display:'',
+  
   source: bloodMovies
 });
 
 
-function funcClickTest();
+function funcClickTest(){};
